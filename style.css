@@ -44,10 +44,10 @@ body {
 .rule-container{
   width: 23rem;
   height: 30rem;
-  justify-content: start;
   position:relative;
   border: 2px solid black;
   border-radius: 20px;
+  
 }
 .main{
   position: relative;
