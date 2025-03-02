@@ -56,9 +56,11 @@ function checkAns(idx) {
     }
     h2.innerHTML = `Game Over! Your score was <b>${level}</b><br><b> High Score : ${highscore}<b><br> Press any key to start.<br> `;
     document.querySelector("body").style.backgroundColor = "red";
+    document.querySelector("body").style.color= "white"
     setTimeout(function () {
       document.querySelector("body").style.backgroundColor = "white";
-    }, 1000);
+      document.querySelector("body").style.color= "black"
+    }, 500);
 
     reset();
   }
@@ -86,3 +88,33 @@ function reset() {
   userSeq = [];
   level = 0;
 }
+
+//themes
+let bd = document.querySelector("body");
+let count = 0;
+let theme = document.querySelector(".themes");
+let box = document.querySelector(".rule-container");
+let all = document.querySelector(".dark");
+
+
+theme.addEventListener("click", function () {
+    count++;
+    console.log(count);
+
+    // Toggle theme based on count
+    if (count %2== 0) {
+        bd.style.backgroundColor = '#fff';
+        theme.style.color = '#000'
+        box.style.color = `#000`
+        all.style.color = `#000`
+        box.style.border = `2px solid #000`
+
+        
+    } else {
+      bd.style.backgroundColor =`#000`;
+      theme.style.color = '#fff';
+      box.style.color = '#fff';
+      all.style.color = '#fff';
+      box.style.border = `2px solid #fff`
+    }
+});

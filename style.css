@@ -109,3 +109,9 @@ ol > li::marker {
   }
   
 }
+.themes{
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+}
