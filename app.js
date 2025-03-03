@@ -6,6 +6,7 @@ let btns = ["yellow", "red", "purple", "green"];
 let started = false;
 let level = 0;
 let highscore =0;
+let count = 0;//theme
 
 let h2 = document.querySelector("h2");
 
@@ -58,8 +59,15 @@ function checkAns(idx) {
     document.querySelector("body").style.backgroundColor = "red";
     document.querySelector("body").style.color= "white"
     setTimeout(function () {
-      document.querySelector("body").style.backgroundColor = "white";
-      document.querySelector("body").style.color= "black"
+      if(count%2==0){
+        document.querySelector("body").style.backgroundColor = "white";
+        document.querySelector("body").style.color= "black";
+      }
+      else{
+        document.querySelector("body").style.backgroundColor = "black";
+        document.querySelector("body").style.color= "white";
+      }
+
     }, 500);
 
     reset();
@@ -91,7 +99,7 @@ function reset() {
 
 //themes
 let bd = document.querySelector("body");
-let count = 0;
+
 let theme = document.querySelector(".themes");
 let box = document.querySelector(".rule-container");
 let all = document.querySelector(".dark");
